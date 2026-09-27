@@ -27,7 +27,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Configure Pexels secret
         run: printf '%s' "$PEXELS_API_KEY" | npx wrangler secret put PEXELS_API_KEY
